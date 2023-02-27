@@ -7,20 +7,21 @@ const project_detail = ({data:{id}}) => {
         axios.get(`http://localhost:3000/posts/${id}`)
         .then(({data}) => setdata(data))
     },[])
+
     useEffect(() => {
         const form = document.querySelector("#form")
         const title = document.querySelector("#title")
-        form.addEventListener("submit", async (e) => {
+        form.addEventListener("submit",(e) => {
             e.preventDefault()
             const newData = {
                 title: title.value
             }
-            axios.post(`http://localhost:3000/posts/${id}`, newData)
+            axios.put(`http://localhost:3000/posts/${id}`, newData)
             .then(() => router.navigate('/'))
         })
         
     })
-    return /*html*/`
+    return `
     <form onsubmit="return alert('Thành công')" action="" id="form">
     <div>Title:
       <input type="text" value="${data.title}" id="title">
@@ -32,3 +33,4 @@ const project_detail = ({data:{id}}) => {
   </form>
     `
 }
+export default project_detail

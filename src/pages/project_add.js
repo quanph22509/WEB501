@@ -6,7 +6,7 @@ const project_add = () => {
         const form = document.querySelector("#form")
         const title = document.querySelector("#title")
 
-        form.addEventListener("submit", async (e) => {
+        form.addEventListener("submit",(e) => {
             e.preventDefault()
             const newData = {
                 title: title.value
