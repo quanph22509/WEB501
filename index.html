@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Vite App</title>
+        <link rel="stylesheet" href="./src/style.css" />
+
+    </head>
+    <body>
+        <!-- <table class="table table-border">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Title</th>
+                    <th>
+                        <a href="/project/add">Thêm</a>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                ${data.map(list=>{
+                    return `
+                        <tr>
+                            <td>${list.id}</td>
+                            <td>${list.title}</td>
+                            <td>
+                                <button onclick="return confirm('Xác nhận xóa?')" id="btn-xoa" data-id="${list.id}">Xoá</button>
+                                <a href="/project/${list.id}/edit">Sửa</a>
+                            </td>
+                        </tr>
+                    `
+                }).join("")}
+            </tbody>
+        </table> -->
+        <!-- <form onsumit="return alert('Đăng ký thành công')"action="" id="form">
+            <div>Email: 
+                <input type="email" name="" id="email" required>
+            </div>
+            <div>Password:
+                <input type="password" name="" id="password" required>
+            </div>
+            <div>
+                <button class="btn btn-danger">Đăng ký</button>
+            </div>
+        </form> -->
+        <div id="app" class="bg-red-500"></div>
+
+        <script type="module" src="./src/main.js"></script>
+    </body>
+</html>
