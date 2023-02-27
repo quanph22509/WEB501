@@ -9,15 +9,18 @@ const project = () => {
         .then(({data})=>setdata(data))
     },[])
     useEffect(() => {
-        const btns = document.querySelectorAll("#btn-xoa")
 
+
+        const btns = document.querySelectorAll("#btn-xoa")
+        console.log(btns);
         for(let btn of btns) {
             const id = btn.dataset.id;
             btn.addEventListener('click',() =>{
                 const project = data.filter((project)=>{
                     return project.id != id;
                 })
-                axios.delete(`http://localhost:3000/${id}`)
+                setdata(data)
+                axios.delete(`http://localhost:3000/posts/${id}`)
                 .then(() =>router.navigate('/'))
             })
         }

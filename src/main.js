@@ -19,7 +19,7 @@ router.on('/project/add', ()=> {
 router.on('/project/:id/edit', (parmas)=> {
     render(() => {
         return project_detail(parmas)
-    })
+    },app)
 })
 router.on('/signin', () => {
     render(signin,app)
